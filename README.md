@@ -1,2 +1,1 @@
-# scanImage
-简单识别图片中的验证码(有遮盖线的识别率不高)
+# scanVerifyImage
