@@ -24,6 +24,10 @@ public class ScanImage {
         ITesseract instance = new Tesseract();  // JNA Interface Mapping
         instance.setDatapath(new File(ScanImage.class.getResource("/resources/").getPath()).getPath());
 //        instance.setLanguage("osd");  中文
+        //如果设置简体中文或者繁体的识别比osd更高,需要去下载对应的traineddata文件（https://github.com/tesseract-ocr/tessdata）
+        //instance.setLanguage("osd");  简体中文 	chi_sim.traineddata
+        //instance.setLanguage("osd");  繁体中文 	chi_tra.traineddata
+        
         try {
             String result = instance.doOCR(imageFile);
             System.out.println(result);
